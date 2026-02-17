@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rook · Otimizador de Desempenho para Windows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- CURSOR CUSTOMIZADO -->
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- FLOATING CTA -->
+    <div class="floating-cta">
+        <a href="#download" class="floating-cta-btn">
+            <i class="fas fa-download"></i>
+            <span>Baixar</span>
+        </a>
+    </div>
+
+<!-- NAVBAR PREMIUM -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        
+<div class="logo">
+    <a href="/" class="logo-link">
+        <div class="logo-icon-wrapper">
+            <img src="img/logo/logo.png" alt="Rook Logo" class="logo-img">
+            <span class="logo-glow"></span>
+        </div>
+
+        <div class="logo-content">
+            <span class="logo-text">rook</span>
+            <span class="logo-version">v2.0</span>
+        </div>
+    </a>
+</div>
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="#hero" class="nav-link active">Início</a>
+            </li>
+            <li class="nav-item">
+                <a href="#benefits" class="nav-link">Recursos</a>
+            </li>
+            <li class="nav-item">
+                <a href="#features" class="nav-link">Tecnologias</a>
+            </li>
+            <li class="nav-item">
+                <a href="#how-it-works" class="nav-link">Como funciona</a>
+            </li>
+            <li class="nav-item">
+                <a href="#screenshots" class="nav-link">Visual</a>
+            </li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="#download" class="nav-download-btn magnetic-btn">
+                <i class="fas fa-download"></i>
+                <span>Download</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (aparece quando clica no hamburger) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="mobile-logo">rook</span>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link">Início</a></li>
+            <li><a href="#benefits" class="mobile-nav-link">Recursos</a></li>
+            <li><a href="#features" class="mobile-nav-link">Tecnologias</a></li>
+            <li><a href="#how-it-works" class="mobile-nav-link">Como funciona</a></li>
+            <li><a href="#screenshots" class="mobile-nav-link">Visual</a></li>
+            <li><a href="#download" class="mobile-nav-link mobile-download-btn">Download</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="mobile-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION CORRIGIDA -->
+<section class="hero" id="hero">
+    <div class="hero-bg-layer"></div>
+    <div class="hero-gradient-layer"></div>
+    <div class="hero-noise-layer"></div>
+    
+    <div class="particles" id="particles"></div>
+    
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-tagline-wrapper">
+                <span class="hero-tagline">
+                    <i class="fas fa-bolt"></i>
+                    <span>Desempenho máximo para Windows</span>
+                </span>
+                <span class="windows-badge">
+                    <i class="fab fa-windows"></i>
+                    <span>10/11</span>
+                </span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-line hero-title-line-1">
+                    <span class="gradient-text">rook</span> é a ferramenta
+                </span>
+                <span class="hero-title-line hero-title-line-2">
+                    <span class="highlight-text">definitiva</span> para
+                </span>
+                <span class="hero-title-line hero-title-line-3">
+                    otimização do sistema
+                </span>
+            </h1>
+
+            <p class="hero-description">
+                Limpeza profunda, ajustes de performance e monitoramento em tempo real. 
+                Tudo em uma interface moderna e intuitiva.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    <span>Baixar Agora</span>
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    <i class="fas fa-play"></i>
+                    <span>Ver Recursos</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-suffix">K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="49">0</span>
+                        <span class="stat-suffix">/5</span>
+                        <span class="stat-label">Avaliação</span>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label">Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="mockup-wrapper">
+                <div class="mockup">
+                    <div class="mockup-header">
+                        <div class="window-controls">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="window-title">rook dashboard</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-sidebar">
+                            <div class="sidebar-item active"></div>
+                            <div class="sidebar-item"></div>
+                            <div class="sidebar-item"></div>
+                        </div>
+                        <div class="mockup-main">
+                            <div class="mockup-stats">
+                                <div class="mockup-stat cpu"></div>
+                                <div class="mockup-stat ram"></div>
+                            </div>
+                            <div class="mockup-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits" id="benefits" data-scroll-section>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline">POR QUE ESCOLHER O ROOK?</span>
+                <h2 class="split-text-reveal">Otimização inteligente,<br>resultados reais</h2>
+                <p class="reveal-text">Mais de 20 funcionalidades em uma interface clean e intuitiva</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card tilt-3d reveal" data-delay="0.1">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #1F4E79, #516DDB)">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Otimização inteligente</h3>
+                    <p>Algoritmos avançados que identificam e otimizam automaticamente os recursos do sistema</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="benefit-card tilt-3d reveal" data-delay="0.2">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #516DDB, #6150DB)">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Limpeza avançada</h3>
+                    <p>Remove arquivos temporários, cache do Windows Update e resíduos do sistema</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="benefit-card tilt-3d reveal" data-delay="0.3">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #6150DB, #8E51DB)">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Diagnóstico completo</h3>
+                    <p>Monitoramento em tempo real de CPU, RAM, disco e temperatura do sistema</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="benefit-card tilt-3d reveal" data-delay="0.4">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #8E51DB, #BC51DB)">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança e reversão</h3>
+                    <p>Cria pontos de restauração automáticos antes de qualquer alteração no sistema</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="benefit-card tilt-3d reveal" data-delay="0.5">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #5199DB, #516DDB)">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Interface moderna</h3>
+                    <p>Design clean com cards animados, sidebar intuitiva e feedback visual em tempo real</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="benefit-card tilt-3d reveal" data-delay="0.6">
+                    <div class="benefit-icon" style="background: linear-gradient(135deg, #2C14DE, #516DDB)">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <h3>Leve e rápido</h3>
+                    <p>Ocupa menos de 50MB em disco e não roda em segundo plano sem necessidade</p>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features" data-scroll-section>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline">RECURSOS TÉCNICOS</span>
+                <h2 class="split-text-reveal">Tudo que você precisa em<br>um único software</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item reveal" data-delay="0.1">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Ajuste de energia</h4>
+                        <p>Ativa plano Ultimate Performance e desativa hibernação</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.15">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Controle de serviços</h4>
+                        <p>Gerencia SysMain, Xbox Services, Fax e Remote Registry</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.2">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Limpeza de temporários</h4>
+                        <p>Remove arquivos %temp%, .tmp e cache de thumbnails</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.25">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>SFC / DISM</h4>
+                        <p>Executa SFC /scannow e DISM /RestoreHealth integrados</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.3">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Gerenciamento de startup</h4>
+                        <p>Desativa programas desnecessários na inicialização</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.35">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Monitoramento</h4>
+                        <p>CPU, RAM, disco e temperatura em tempo real</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.4">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Otimização de rede</h4>
+                        <p>Reseta TCP/IP, Winsock e limpa cache DNS</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.45">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Ponto de restauração</h4>
+                        <p>Cria backup automático antes de qualquer alteração</p>
+                    </div>
+                </div>
+
+                <div class="feature-item reveal" data-delay="0.5">
+                    <div class="feature-icon pulse-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Desativa telemetria</h4>
+                        <p>Remove rastreamentos e melhora privacidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORIZONTAL SCROLL SECTION -->
+    <section class="horizontal-scroll-section" id="horizontal-scroll" data-scroll-section>
+        <div class="horizontal-scroll-container">
+            <div class="horizontal-scroll-wrapper">
+                <div class="horizontal-item">
+                    <div class="horizontal-content">
+                        <h2>Otimização em Camadas</h2>
+                        <p>Múltiplas camadas de otimização trabalhando em conjunto</p>
+                        <div class="blob-animation"></div>
+                    </div>
+                </div>
+                <div class="horizontal-item">
+                    <div class="horizontal-content">
+                        <h2>Monitoramento em Tempo Real</h2>
+                        <p>Acompanhe cada mudança no desempenho do sistema</p>
+                        <canvas id="particleCanvas"></canvas>
+                    </div>
+                </div>
+                <div class="horizontal-item">
+                    <div class="horizontal-content">
+                        <h2>Segurança Integrada</h2>
+                        <p>Proteção durante todo o processo de otimização</p>
+                        <svg class="morphing-svg" viewBox="0 0 200 200">
+                            <path class="morph-path" d="M100,20 Q150,20 180,70 Q200,100 180,130 Q150,180 100,180 Q50,180 20,130 Q0,100 20,70 Q50,20 100,20" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="horizontal-item">
+                    <div class="horizontal-content">
+                        <h2>Resultados Visíveis</h2>
+                        <p>Veja a diferença em números e performance</p>
+                        <div class="animated-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" id="how-it-works" data-scroll-section>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline">COMO FUNCIONA</span>
+                <h2 class="split-text-reveal">Otimize seu sistema em<br>4 passos simples</h2>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-progress" id="timelineProgress"></div>
+                <div class="steps">
+                    <div class="step-item reveal" data-delay="0.1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Instale</h3>
+                            <p>Baixe e execute o instalador. O programa verifica automaticamente permissões de administrador.</p>
+                        </div>
+                        <div class="step-line-animated"></div>
+                    </div>
+
+                    <div class="step-item reveal" data-delay="0.2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Analise</h3>
+                            <p>rook faz um diagnóstico completo do sistema, identificando pontos de melhoria.</p>
+                        </div>
+                        <div class="step-line-animated"></div>
+                    </div>
+
+                    <div class="step-item reveal" data-delay="0.3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Otimize</h3>
+                            <p>Escolha entre otimização rápida ou limpeza profunda. Acompanhe o progresso em tempo real.</p>
+                        </div>
+                        <div class="step-line-animated"></div>
+                    </div>
+
+                    <div class="step-item reveal" data-delay="0.4">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Monitore</h3>
+                            <p>Acompanhe métricas de desempenho e receba recomendações personalizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS SECTION -->
+    <section class="screenshots" id="screenshots" data-scroll-section>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline">VISUAL MODERNO</span>
+                <h2 class="split-text-reveal">Interface limpa, intuitiva<br>e profissional</h2>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-item reveal" data-delay="0.1">
+                    <div class="screenshot-img dashboard image-hover">
+                        <div class="img-overlay"></div>
+                        <div class="screenshot-caption">
+                            <h4>Dashboard</h4>
+                            <p>Métricas em tempo real</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-item reveal" data-delay="0.2">
+                    <div class="screenshot-img optimize image-hover">
+                        <div class="img-overlay"></div>
+                        <div class="screenshot-caption">
+                            <h4>Otimização</h4>
+                            <p>Progresso visual</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-item reveal" data-delay="0.3">
+                    <div class="screenshot-img services image-hover">
+                        <div class="img-overlay"></div>
+                        <div class="screenshot-caption">
+                            <h4>Serviços</h4>
+                            <p>Gerenciamento completo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPANDING CARDS SECTION -->
+    <section class="expanding-cards-section" data-scroll-section>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline">RECURSOS EXPANDIDOS</span>
+                <h2 class="split-text-reveal">Explore todas as funcionalidades</h2>
+            </div>
+
+            <div class="expanding-grid">
+                <div class="expanding-card" data-expanded="false">
+                    <div class="card-front">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Performance</h3>
+                    </div>
+                    <div class="card-back">
+                        <h4>Otimizações Avançadas</h4>
+                        <ul>
+                            <li>CPU Priority</li>
+                            <li>Memory Management</li>
+                            <li>Disk Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="expanding-card" data-expanded="false">
+                    <div class="card-front">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Segurança</h3>
+                    </div>
+                    <div class="card-back">
+                        <h4>Proteção Multi-camada</h4>
+                        <ul>
+                            <li>Restore Points</li>
+                            <li>Registry Backup</li>
+                            <li>System Scan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="expanding-card" data-expanded="false">
+                    <div class="card-front">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoramento</h3>
+                    </div>
+                    <div class="card-back">
+                        <h4>Análise em Tempo Real</h4>
+                        <ul>
+                            <li>CPU Usage</li>
+                            <li>Memory Stats</li>
+                            <li>Disk Activity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION -->
+    <section class="comparison" data-scroll-section>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tagline">COMPARAÇÃO</span>
+                <h2 class="split-text-reveal">rook vs outros otimizadores</h2>
+            </div>
+
+            <div class="comparison-table reveal">
+                <div class="comparison-row header">
+                    <div class="comparison-feature">Recurso</div>
+                    <div class="comparison-rook">rook</div>
+                    <div class="comparison-other">Outros otimizadores</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Preço</div>
+                    <div class="comparison-rook"><i class="fas fa-check"></i> Gratuito</div>
+                    <div class="comparison-other"><i class="fas fa-times"></i> Pago/Assinatura</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Interface moderna</div>
+                    <div class="comparison-rook"><i class="fas fa-check"></i> Sim</div>
+                    <div class="comparison-other"><i class="fas fa-times"></i> Interface datada</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Código aberto</div>
+                    <div class="comparison-rook"><i class="fas fa-check"></i> Sim</div>
+                    <div class="comparison-other"><i class="fas fa-times"></i> Fechado</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Ponto de restauração</div>
+                    <div class="comparison-rook"><i class="fas fa-check"></i> Automático</div>
+                    <div class="comparison-other"><i class="fas fa-times"></i> Manual</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Monitoramento real-time</div>
+                    <div class="comparison-rook"><i class="fas fa-check"></i> Sim</div>
+                    <div class="comparison-other"><i class="fas fa-times"></i> Não</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta" id="download" data-scroll-section>
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="split-text-reveal">Pronto para deixar seu Windows mais rápido?</h2>
+                <p class="reveal-text">Junte-se a mais de 500 mil usuários que já otimizaram seus sistemas com rook</p>
+                <a href="#" class="btn btn-cta magnetic-btn">
+                    <i class="fas fa-download"></i>
+                    Baixar Gratuitamente
+                </a>
+                <div class="cta-info">
+                    <span><i class="fas fa-windows"></i> Windows 10/11</span>
+                    <span><i class="fas fa-shield-alt"></i> 100% seguro</span>
+                    <span><i class="fas fa-code-branch"></i> v2.0</span>
+                </div>
+            </div>
+        </div>
+        <div class="cta-bg-video">
+            <video autoplay muted loop playsinline>
+                <source src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAQhtZGF0AAAAMgAAAEVKgnUc9sJhJv5UKr8X9U8nCs9X" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" data-scroll-section>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand reveal">
+                    <div class="footer-logo">rook</div>
+                    <p>Otimizador de desempenho moderno para Windows. Código aberto e gratuito.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link magnetic-btn"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link magnetic-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link magnetic-btn"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links reveal" data-delay="0.1">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="#features" class="animated-underline">Recursos</a></li>
+                        <li><a href="#download" class="animated-underline">Download</a></li>
+                        <li><a href="#" class="animated-underline">Documentação</a></li>
+                        <li><a href="#" class="animated-underline">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links reveal" data-delay="0.2">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#" class="animated-underline">FAQ</a></li>
+                        <li><a href="#" class="animated-underline">GitHub Issues</a></li>
+                        <li><a href="#" class="animated-underline">Discord</a></li>
+                        <li><a href="#" class="animated-underline">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links reveal" data-delay="0.3">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#" class="animated-underline">Termos de uso</a></li>
+                        <li><a href="#" class="animated-underline">Política de privacidade</a></li>
+                        <li><a href="#" class="animated-underline">Licença MIT</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom reveal">
+                <p>&copy; 2024 rook. Todos os direitos reservados.</p>
+                <p>Desenvolvido com <i class="fas fa-heart" style="color: #BC51DB;"></i> para a comunidade Windows</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
