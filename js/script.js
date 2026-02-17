@@ -986,3 +986,82 @@
         }
     });
 })();
+// Gráfico animado no mockup
+const miniChart = document.getElementById('miniChart');
+if (miniChart) {
+    const ctx = miniChart.getContext('2d');
+    let width = miniChart.width;
+    let height = miniChart.height;
+    
+    function drawChart() {
+        ctx.clearRect(0, 0, width, height);
+        
+        // Dados do gráfico
+        const data1 = [20, 35, 25, 45, 30, 50, 40, 55, 35, 48, 42, 38];
+        const data2 = [15, 25, 20, 35, 25, 40, 30, 45, 28, 38, 32, 28];
+        
+        const barWidth = (width - 40) / data1.length;
+        
+        // Desenhar linhas
+        ctx.beginPath();
+        ctx.strokeStyle = '#516DDB';
+        ctx.lineWidth = 2;
+        ctx.shadowColor = '#516DDB';
+        ctx.shadowBlur = 10;
+        
+        for (let i = 0; i < data1.length; i++) {
+            const x = 20 + i * barWidth + barWidth / 2;
+            const y = height - 20 - (data1[i] / 60) * (height - 40);
+            
+            if (i === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+        }
+        ctx.stroke();
+        
+        // Desenhar pontos
+        ctx.shadowBlur = 15;
+        for (let i = 0; i < data1.length; i++) {
+            const x = 20 + i * barWidth + barWidth / 2;
+            const y = height - 20 - (data1[i] / 60) * (height - 40);
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 4, 0, Math.PI * 2);
+            ctx.fillStyle = '#516DDB';
+            ctx.fill();
+        }
+        
+        // Segunda linha
+        ctx.beginPath();
+        ctx.strokeStyle = '#BC51DB';
+        
+        for (let i = 0; i < data2.length; i++) {
+            const x = 20 + i * barWidth + barWidth / 2;
+            const y = height - 20 - (data2[i] / 60) * (height - 40);
+            
+            if (i === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+        }
+        ctx.stroke();
+        
+        // Pontos da segunda linha
+        for (let i = 0; i < data2.length; i++) {
+            const x = 20 + i * barWidth + barWidth / 2;
+            const y = height - 20 - (data2[i] / 60) * (height - 40);
+            
+            ctx.beginPath();
+            ctx.arc(x, y, 4, 0, Math.PI * 2);
+            ctx.fillStyle = '#BC51DB';
+            ctx.fill();
+        }
+        
+        requestAnimationFrame(drawChart);
+    }
+    
+    drawChart();
+}
