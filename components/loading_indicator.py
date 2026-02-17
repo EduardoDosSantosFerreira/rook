@@ -1,6 +1,6 @@
 # components/loading_indicator.py
 from PySide6.QtWidgets import QWidget
-from PySide6.QtCore import QPropertyAnimation, QPointF, QRectF, Qt, QTimer
+from PySide6.QtCore import QPropertyAnimation, QPointF, Qt, QTimer
 from PySide6.QtGui import QPainter, QColor, QBrush
 import math
 

@@ -2,7 +2,7 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
-from .animated_card import AnimatedCard
+from ...components.animated_card import AnimatedCard
 import os
 
 class ImageCard(AnimatedCard):

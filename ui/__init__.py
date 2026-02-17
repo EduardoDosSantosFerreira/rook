@@ -1,22 +1,13 @@
 # ui/__init__.py
 """
-Módulo de interface do usuário do Windows Optimizer Pro
-Contém todos os componentes da interface gráfica
+Módulo de interface do usuário do rook
 """
 
 from .main_window import MainWindow
-from .sidebar import Sidebar, SidebarButton
-from .dashboard import Dashboard, MetricCard
+from .sidebar import Sidebar
 
-__all__ = [
-    'MainWindow',
-    'Sidebar',
-    'SidebarButton',
-    'Dashboard',
-    'MetricCard'
-]
+__all__ = ['MainWindow', 'Sidebar']
 
-__version__ = '2.0.0'
-__author__ = 'Windows Optimizer Pro Team'
+__version__ = '1.0.0'
 
 print(f"[INFO] Interface UI v{__version__} carregada")
