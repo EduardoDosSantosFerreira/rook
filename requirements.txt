@@ -1,0 +1,24 @@
+# Dependências principais
+PySide6==6.6.0
+PySide6-Essentials==6.6.0
+PySide6-Addons==6.6.0
+shiboken6==6.6.0
+
+# Dependências de sistema (já inclusas no Python)
+# psutil==5.9.5  # Opcional - para monitoramento de recursos
+# wmi==1.5.1     # Opcional - para informações avançadas do Windows
+
+# Nota: As bibliotecas abaixo são nativas do Python e não precisam ser instaladas:
+# - os
+# - sys
+# - subprocess
+# - ctypes
+# - tempfile
+# - shutil
+# - pathlib
+# - datetime
+# - logging
+# - winreg (apenas Windows)
+
+# Para instalar todas as dependências, execute:
+# pip install -r requirements.txt
