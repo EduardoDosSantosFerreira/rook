@@ -1,13 +1,8 @@
 # ui/__init__.py
 """
-Módulo de interface do usuário do rook
+Módulo de interface do usuário
 """
-
 from .main_window import MainWindow
-from .sidebar import Sidebar
+from .widgets import Card, Button, LogArea
 
-__all__ = ['MainWindow', 'Sidebar']
-
-__version__ = '1.0.0'
-
-print(f"[INFO] Interface UI v{__version__} carregada")
+__all__ = ['MainWindow', 'Card', 'Button', 'LogArea']

@@ -1,9 +1,13 @@
 # main.py
+"""
+rook - Windows Optimizer
+Ferramenta leve e objetiva para otimização do Windows
+"""
 import sys
 import os
 import ctypes
 
-# Adicionar o diretório atual ao path
+# Adicionar diretório atual ao path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # Configurar encoding para Windows
@@ -13,53 +17,54 @@ if sys.platform == 'win32':
 
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import Qt
-
 from ui.main_window import MainWindow
-from styles.theme_manager import ThemeManager
-from managers.log_manager import LogManager
-from managers.system_manager import SystemManager
+from core.logger import Logger
+from core.optimizer import Optimizer
+
 
 class Application:
+    """Classe principal da aplicação"""
+    
     def __init__(self):
         self.app = QApplication(sys.argv)
         self.app.setStyle('Fusion')
         self.app.setApplicationName("rook")
         
-        # PySide6 lida com DPI automaticamente - removendo atributo deprecated
+        # Configurar DPI
+        os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
+        os.environ["QT_SCALE_FACTOR"] = "1"
         
-        # Inicializar gerenciadores
-        self.log_manager = LogManager()
-        self.system_manager = SystemManager()
+        # Inicializar componentes
+        self.logger = Logger()
+        self.optimizer = Optimizer(self.logger)
         
-        # Criar janela principal
-        self.window = MainWindow(self.log_manager, self.system_manager)
-        
-    def check_admin(self):
+        # Criar janela
+        self.window = MainWindow(self.logger, self.optimizer)
+    
+    def is_admin(self) -> bool:
         """Verifica se está rodando como administrador"""
         try:
             return ctypes.windll.shell32.IsUserAnAdmin()
         except:
             return False
-            
-    def run(self):
+    
+    def run(self) -> int:
         """Executa a aplicação"""
-        # Verificar permissões de admin
-        if not self.check_admin():
-            self.window.log_message("Execute como administrador para todas as funcionalidades", "warning")
+        if not self.is_admin():
+            self.window.show_warning(
+                "Execute como administrador para todas as funcionalidades"
+            )
         else:
-            self.window.log_message("Executando com privilégios de administrador", "success")
-            
+            self.window.show_success("Executando com privilégios de administrador")
+        
         self.window.show()
         return self.app.exec()
 
+
 def main():
-    """Função principal"""
-    # Configurar variáveis de ambiente para DPI
-    os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-    os.environ["QT_SCALE_FACTOR"] = "1"
-    
     app = Application()
     sys.exit(app.run())
+
 
 if __name__ == '__main__':
     main()
