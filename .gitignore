@@ -12,7 +12,6 @@ venv.bak/
 pythonenv*
 
 # Distribuição
-dist/
 build/
 *.egg-info/
 *.egg
