@@ -1,41 +1,64 @@
-# Python
+# =========================
+# 🐍 Python
+# =========================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+
+# Ambientes virtuais
 env/
 venv/
 ENV/
-env.bak/
-venv.bak/
-pythonenv*
+.env/
+.env.*
 
-# Distribuição
+# =========================
+# 📦 Build / Distribuição
+# =========================
 build/
 *.egg-info/
 *.egg
 
-# PyInstaller
+# 🔥 IMPORTANTE:
+# Ignora executáveis em geral...
+*.exe
+
+# ...MAS permite executáveis dentro da dist
+!dist/
+!dist/**
+!dist/*.exe
+
+# =========================
+# 🚀 PyInstaller
+# =========================
 *.spec
 
-# Logs
+# =========================
+# 📄 Logs
+# =========================
 *.log
 WindowsOptimizer_Logs/
 
-# IDE
+# =========================
+# 🧠 IDEs / Editores
+# =========================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Windows
+# =========================
+# 🪟 Windows
+# =========================
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Projeto
+# =========================
+# 🎨 Projeto (opcional)
+# =========================
 *.ico
-*.exe
